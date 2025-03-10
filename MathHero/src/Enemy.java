@@ -11,8 +11,15 @@ public abstract class Enemy
 	private int alpha = 255;
 	private int arrowR = Util.PLAYER_RADIUS+Util.ARROW_LENGTH;
 
-	public Enemy(double speed)
+	private final int n1 = (int)(Math.random()*9)+1;
+	private final int n2 = (int)(Math.random()*9)+1;
+
+	protected int getN1(){ return n1; }
+	protected int getN2(){ return n2; }
+
+	public Enemy(double speed, java.awt.Color color)
 	{
+		this.color = color;
 		this.speed = speed;
 		r = Util.MAX_R;
 		t = Math.random()*Math.PI*2;
@@ -91,8 +98,9 @@ public abstract class Enemy
 
 	public void draw(Graphics g)
 	{
-		g.setColor(color);
+		g.setColor(Color.BLACK);
 		g.drawString(getProblem(), x()-radius, y()-radius);
+		g.setColor(color);
 		g.fillOval(x()-radius, y()-radius, radius*2, radius*2);
 		if(dying1)
 		{

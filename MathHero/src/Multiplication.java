@@ -3,9 +3,9 @@ public class Multiplication extends Enemy
 	protected String problem;
 	protected int solution;
 
-	public Multiplication()
+	public Multiplication(java.awt.Color color)
 	{
-		super(.4);
+		super(.4, color);
 		int n1 = (int)(Math.random()*9)+1;
 		int n2 = (int)(Math.random()*9)+1;
 		solution = n1*n2;

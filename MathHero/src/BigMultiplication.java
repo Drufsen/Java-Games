@@ -3,9 +3,9 @@ public class BigMultiplication extends Enemy
 	protected String problem;
 	protected int solution;
 
-	public BigMultiplication()
+	public BigMultiplication(java.awt.Color color)
 	{
-		super(.05);
+		super(.05, color);
 		int n1 = (int)(Math.random()*90)+10;
 		int n2 = (int)(Math.random()*90)+10;
 		solution = n1*n2;

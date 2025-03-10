@@ -1,25 +1,16 @@
 public class Subtraction extends Enemy
 {
-	protected String problem;
-	protected int solution;
-
-	public Subtraction()
+	public Subtraction(java.awt.Color color)
 	{
-		super(.4);
-		int n1 = (int)(Math.random()*9)+1;
-		int n2 = (int)(Math.random()*9)+1;
-		solution = n1;
-		problem = ""+(n1+n2)+"-"+n2;
-		color = java.awt.Color.RED;
+		super(.4, color);
 	}
 
 	public String getProblem()
 	{
-		return problem;
+		return ""+(getN1()+getN2())+"-"+getN2();
 	}
-
 	public int getSolution()
 	{
-		return solution;
+		return getN1();
 	}
 }

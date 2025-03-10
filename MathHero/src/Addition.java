@@ -3,9 +3,9 @@ public class Addition extends Enemy
 	protected String problem;
 	protected int solution;
 
-	public Addition()
+	public Addition(java.awt.Color color)
 	{
-		super(.6);
+		super(.6, color);
 		int n1 = (int)(Math.random()*9)+1;
 		int n2 = (int)(Math.random()*9)+1;
 		solution = n1+n2;

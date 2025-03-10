@@ -3,9 +3,9 @@ public class BigAddition extends Enemy
 	protected String problem;
 	protected int solution;
 
-	public BigAddition()
+	public BigAddition(java.awt.Color color)
 	{
-		super(.3);
+		super(.3, color);
 		int n1 = (int)(Math.random()*90)+10;
 		int n2 = (int)(Math.random()*90)+10;
 		solution = n1+n2;
